@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+import logo from './../../assets/logo.gif'
+
 
 const Navbar = () => {
 
@@ -58,7 +60,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex items-center gap-2">
-                    <img src="./logo.gif" className="w-12 h-12" alt="" />
+                    <img src={logo} className="w-12 h-12" alt="" />
                     <p className="text-xl font-bold">TechVine</p>
                 </div>
                 
