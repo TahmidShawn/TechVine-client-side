@@ -21,7 +21,7 @@ const Routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: ()=> fetch('/data.json')
+                loader: () => fetch('http://localhost:5000/brand')
             },
             {
                 path: '/home/1',
@@ -47,7 +47,7 @@ const Routes = createBrowserRouter([
                 path: '/home/6',
                 element: <Nokia></Nokia>
             },
-            
+
             {
                 path: '/addProduct',
                 element: <AddProduct></AddProduct>

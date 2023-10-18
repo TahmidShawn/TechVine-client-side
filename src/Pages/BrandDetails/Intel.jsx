@@ -1,8 +1,9 @@
+import Advertisement from "../../components/Advertisement/Advertisement";
 
 const Intel = () => {
     return (
         <div>
-            Intel
+            <Advertisement></Advertisement>
         </div>
     );
 };

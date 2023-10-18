@@ -1,8 +1,9 @@
+import Advertisement from "../../components/Advertisement/Advertisement";
 
 const Nokia = () => {
     return (
         <div>
-            Nokia
+            <Advertisement></Advertisement>
         </div>
     );
 };

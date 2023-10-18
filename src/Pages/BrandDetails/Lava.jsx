@@ -1,8 +1,9 @@
+import Advertisement from "../../components/Advertisement/Advertisement";
 
 const Lava = () => {
     return (
         <div>
-            Lava
+            <Advertisement></Advertisement>
         </div>
     );
 };

@@ -1,8 +1,9 @@
+import Advertisement from "../../components/Advertisement/Advertisement";
 
 const Samsung = () => {
     return (
         <div>
-            Samsung
+            <Advertisement></Advertisement>
         </div>
     );
 };
