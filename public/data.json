@@ -1,26 +1,32 @@
 [
     {
+        "id": 1,
         "brand_name": "Apple",
-        "brand_url": "https://ibb.co/NpzthZj"
+        "brand_url": "https://i.ibb.co/kSsyrps/apple.jpg"
     },
     {
+        "id": 2,
         "brand_name": "Samsung",
-        "brand_url": "https://ibb.co/Sx2XxqH"
+        "brand_url": "https://i.ibb.co/Yb6vb9D/Samsung.png"
     },
     {
+        "id": 3,
         "brand_name": "Sony",
-        "brand_url": "https://ibb.co/25wX528"
+        "brand_url": "https://i.ibb.co/2hBFMPp/sony.png"
     },
     {
+        "id": 4,
         "brand_name": "Lava",
-        "brand_url": "https://ibb.co/qjwDg92"
+        "brand_url": "https://i.ibb.co/ft7qR4p/lava.png"
     },
     {
+        "id": 5,
         "brand_name": "Intel",
-        "brand_url": "https://ibb.co/DRHb6NH"
+        "brand_url": "https://i.ibb.co/y544GQ4/Intel.jpg"
     },
     {
+        "id": 6,
         "brand_name": "Nokia",
-        "brand_url": "https://ibb.co/QnDDzKD"
+        "brand_url": "https://i.ibb.co/dcS0cnX/nokia.png"
     }
 ]
