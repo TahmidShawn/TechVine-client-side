@@ -5,12 +5,13 @@ import Home from '../Pages/Home/Home';
 import AddProduct from '../Pages/AddProduct/AddProduct';
 import MyCart from '../Pages/MyCart/MyCart';
 import Login from '../Pages/Login/Login';
-import Apple from '../Pages/BrandDetails/Apple';
-import Samsung from '../Pages/BrandDetails/Samsung';
-import Sony from '../Pages/BrandDetails/Sony';
-import Lava from '../Pages/BrandDetails/Lava';
-import Intel from '../Pages/BrandDetails/Intel';
-import Nokia from '../Pages/BrandDetails/Nokia';
+import AppleData from '../Pages/BrandDetails/AppleData/AppleData';
+import SamsungData from '../Pages/BrandDetails/SamsungData/SamsungData';
+import SonyData from '../Pages/BrandDetails/SonyData/SonyData';
+import LavaData from '../Pages/BrandDetails/LavaData/LavaData';
+import IntelData from '../Pages/BrandDetails/IntelData/IntelData';
+import NokiaData from '../Pages/BrandDetails/NokiaData/NokiaData';
+
 
 const Routes = createBrowserRouter([
     {
@@ -25,27 +26,28 @@ const Routes = createBrowserRouter([
             },
             {
                 path: '/home/1',
-                element: <Apple></Apple>
+                element: <AppleData></AppleData>,
+                loader: () => fetch('http://localhost:5000/apple')
             },
             {
                 path: '/home/2',
-                element: <Samsung></Samsung>
+                element: <SamsungData></SamsungData>
             },
             {
                 path: '/home/3',
-                element: <Sony></Sony>
+                element: <SonyData></SonyData>
             },
             {
                 path: '/home/4',
-                element: <Lava></Lava>
+                element: <LavaData></LavaData>
             },
             {
                 path: '/home/5',
-                element: <Intel></Intel>
+                element: <IntelData></IntelData>
             },
             {
                 path: '/home/6',
-                element: <Nokia></Nokia>
+                element: <NokiaData></NokiaData>
             },
 
             {
