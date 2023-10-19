@@ -1,8 +1,43 @@
 /* eslint-disable react/prop-types */
 
+import Swal from "sweetalert2";
+
 
 const NokiaIdDesign = ({ data }) => {
     const { name, type, price, image, brandName, rating } = data
+
+    const handleSubmit = () => {
+        const Name = name
+        const Type = type
+        const Price = price
+        const Image = image
+        const BrandName = brandName
+        const Rating = rating
+        const product = { Name, Type, Price, Image, BrandName, Rating }
+        console.log(product);
+
+        fetch('http://localhost:5000/products', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(product)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'success',
+                        text: 'product added',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                    })
+
+                }
+            })
+    }
+
 
     return (
 
@@ -15,7 +50,7 @@ const NokiaIdDesign = ({ data }) => {
                 <p className="font-bold">Type: {type}</p>
                 <p className="font-bold">Price: {price}</p>
                 <p className="font-bold">Rating: {rating}</p>
-                <button className="btn btn-success">Add to Cart</button>
+                <button onClick={handleSubmit} className="btn btn-success">Add to Cart</button>
             </div>
         </div>
     );
