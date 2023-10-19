@@ -11,6 +11,11 @@ import SonyData from '../Pages/BrandDetails/SonyData/SonyData';
 import LavaData from '../Pages/BrandDetails/LavaData/LavaData';
 import IntelData from '../Pages/BrandDetails/IntelData/IntelData';
 import NokiaData from '../Pages/BrandDetails/NokiaData/NokiaData';
+import AppleId from '../Pages/BrandDetails/AppleData/AppleId';
+import IntelId from '../Pages/BrandDetails/IntelData/IntelId';
+import NokiaId from '../Pages/BrandDetails/NokiaData/NokiaId';
+import SamsungId from '../Pages/BrandDetails/SamsungData/SamsungId';
+import SonyId from '../Pages/BrandDetails/SonyData/SonyId';
 
 
 const Routes = createBrowserRouter([
@@ -30,12 +35,29 @@ const Routes = createBrowserRouter([
                 loader: () => fetch('http://localhost:5000/apple')
             },
             {
+                path: 'home/1/:_id',
+                element: <AppleId></AppleId>,
+                loader: () => fetch('http://localhost:5000/apple')
+            },
+            {
                 path: '/home/2',
-                element: <SamsungData></SamsungData>
+                element: <SamsungData></SamsungData>,
+                loader: () => fetch('http://localhost:5000/samsung')
+            },
+            {
+                path: '/home/2/:_id',
+                element: <SamsungId></SamsungId>,
+                loader: () => fetch('http://localhost:5000/samsung')
             },
             {
                 path: '/home/3',
-                element: <SonyData></SonyData>
+                element: <SonyData></SonyData>,
+                loader: () => fetch('http://localhost:5000/sony')
+            },
+            {
+                path: '/home/3/:_id',
+                element: <SonyId></SonyId>,
+                loader: () => fetch('http://localhost:5000/sony')
             },
             {
                 path: '/home/4',
@@ -43,13 +65,24 @@ const Routes = createBrowserRouter([
             },
             {
                 path: '/home/5',
-                element: <IntelData></IntelData>
+                element: <IntelData></IntelData>,
+                loader: () => fetch('http://localhost:5000/intel')
+            },
+            {
+                path: '/home/5/:_id',
+                element: <IntelId></IntelId>,
+                loader: () => fetch('http://localhost:5000/intel')
             },
             {
                 path: '/home/6',
-                element: <NokiaData></NokiaData>
+                element: <NokiaData></NokiaData>,
+                loader: () => fetch('http://localhost:5000/nokia')
             },
-
+            {
+                path: '/home/6/:_id',
+                element: <NokiaId></NokiaId>,
+                loader: () => fetch('http://localhost:5000/nokia')
+            },
             {
                 path: '/addProduct',
                 element: <AddProduct></AddProduct>

@@ -9,7 +9,7 @@ const AppleData = () => {
     return (
         <div>
             <Advertisement></Advertisement>
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 mt-20 gap-5">
                 {
                     appleData.map(apple => <Apple
                         key={apple.id}
