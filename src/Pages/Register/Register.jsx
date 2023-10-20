@@ -1,7 +1,4 @@
-// import { Link } from 'react-router-dom';
-// import Navbar from '../../components/Navbar/Navbar';
 import toast from 'react-hot-toast';
-
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { useContext } from "react";
@@ -16,21 +13,22 @@ const Register = () => {
         const email = e.target.email.value
         const password = e.target.password.value
 
-        // if (password.length < 6) {
-        //     return toast.error("Password must be at least 6 characters")
-        // }
+        if (password.length < 6) {
+            return toast.error("Password must be at least 6 characters")
+        }
 
-        // else if (!/[A-Z]/.test(password)) {
-        //     return toast.error("Password must have at least one uppercase letter")
-        // }
+        else if (!/[A-Z]/.test(password)) {
+            return toast.error("Password must have at least one uppercase letter")
+        }
 
-        // else if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\-|/"'`]/.test(password)) {
-        //     return toast.error("Password must contain at least one special character")
-        // }
+        else if (!/[!@#$%^&*()_+{}[\]:;<>,.?~\-|/"'`]/.test(password)) {
+            return toast.error("Password must contain at least one special character")
+        }
 
         console.log(name, email, password);
         createUser(email, password)
             .then((result) => {
+                console.log(result);
                 toast.success('Successfully Registered!')
             })
             .catch(err => {
@@ -44,7 +42,7 @@ const Register = () => {
 
     return (
         <div>
-            
+
             <h2 className='text-4xl font-bold text-center mt-10'>Register</h2>
             <div className="card flex-shrink-0 w-full mx-auto max-w-sm shadow-2xl bg-base-100 mt-10">
                 <form onSubmit={handleRegister} className="card-body">

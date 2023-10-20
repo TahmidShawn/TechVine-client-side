@@ -185,7 +185,15 @@ const AddProduct = () => {
                             <span className="label-text  mx-5">Brand Name :</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="brandName" placeholder="Brand Name" className="input input-bordered w-full  mx-5" />
+                            <select className="select select-bordered w-full mx-5" name="brandName">
+                                <option disabled selected>Select Brand</option>
+                                <option>apple</option>
+                                <option>nokia</option>
+                                <option>lava</option>
+                                <option>intel</option>
+                                <option>samsung</option>
+                                <option>sony</option>
+                            </select>
                         </label>
                     </div>
                 </div>

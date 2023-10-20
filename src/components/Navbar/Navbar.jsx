@@ -74,14 +74,13 @@ const Navbar = () => {
             <div className="navbar-end">
 
                 <div className="dropdown dropdown-end">
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar bg-gray-400">
                         <div className="w-10 rounded-full">
 
                             {
                                 user ?
                                     <img className="w-20 h-20" src={user.photoURL} alt="" />
                                     :
-
                                     <BiSolidUser className="text-white text-4xl"></BiSolidUser>
 
                             }

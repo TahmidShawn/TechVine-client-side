@@ -24,6 +24,7 @@ import UpdateIntel from '../Pages/Update/UpdateIntel';
 import LavaId from '../Pages/BrandDetails/LavaData/LavaId';
 import UpdateLava from '../Pages/Update/UpdateLava';
 import Register from '../Pages/Register/Register';
+import PrivateRoutes from './PrivateRoutes';
 
 
 const Routes = createBrowserRouter([
@@ -99,11 +100,11 @@ const Routes = createBrowserRouter([
             },
             {
                 path: '/addProduct',
-                element: <AddProduct></AddProduct>
+                element: <PrivateRoutes><AddProduct></AddProduct></PrivateRoutes>
             },
             {
                 path: '/myCart',
-                element: <MyCart></MyCart>,
+                element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
                 loader: () => fetch('http://localhost:5000/products')
             },
             {
