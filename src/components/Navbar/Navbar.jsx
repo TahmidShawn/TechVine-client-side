@@ -1,11 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from './../../assets/logo.gif'
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { BiSolidUser } from 'react-icons/bi';
 
 
 const Navbar = () => {
+
+    // use theme from local storage if available or set light theme
 
     const { user, logOut } = useContext(AuthContext)
     const handleLogOut = () => {
@@ -46,11 +48,25 @@ const Navbar = () => {
             </NavLink>
         </li>
 
-
     </>
 
+    const [theme, setTheme] = useState('light')
+
+    const toggleTheme = () => {
+        setTheme(theme === 'dark' ? 'light' : 'dark')
+    }
+
+    useEffect(() => {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark')
+        }
+        else {
+            document.documentElement.classList.remove('dark')
+        }
+    }, [theme])
+
     return (
-        <div className="navbar bg-[#dbdbdb]">
+        <div className="navbar bg-[#dbdbdb] dark:bg-black dark:text-white">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -73,6 +89,13 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
 
+
+
+                <button className="btn text-black dark:text-white dark:bg-black" onClick={() => toggleTheme()}>
+                    Toggle Mode
+                </button>
+
+
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar bg-gray-400">
                         <div className="w-10 rounded-full">
@@ -86,7 +109,7 @@ const Navbar = () => {
                             }
                         </div>
                     </label>
-                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 dark:bg-black rounded-box w-52">
                         <li>
                             <a className="justify-between">
                                 Profile

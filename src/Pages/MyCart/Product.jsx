@@ -27,8 +27,8 @@ const Product = ({ product }) => {
                         console.log(data)
                         if (data.deletedCount > 0) {
                             Swal.fire(
-                                'Deleted!',
-                                'Your file has been deleted.',
+                                'Deleted',
+                                'Your file has been deleted',
                                 'success'
                             )
                         }

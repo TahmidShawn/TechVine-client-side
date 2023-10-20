@@ -6,7 +6,7 @@ import Newsletter from "../../components/Newsletter/Newsletter";
 
 const Home = () => {
     return (
-        <div>
+        <div className="dark:bg-black">
             <Banner></Banner>
             <Brands></Brands>
             <Description></Description>

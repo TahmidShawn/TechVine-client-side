@@ -33,9 +33,9 @@ const AddProduct = () => {
                     if (data.insertedId) {
                         Swal.fire({
                             title: 'Success!',
-                            text: 'Coffee Added Successfully',
+                            text: 'Added Successfully',
                             icon: 'success',
-                            confirmButtonText: 'Cool'
+                            confirmButtonText: 'Back'
                         })
                     }
                 })
@@ -56,9 +56,9 @@ const AddProduct = () => {
                     if (data.insertedId) {
                         Swal.fire({
                             title: 'Success!',
-                            text: 'Coffee Added Successfully',
+                            text: 'Added Successfully',
                             icon: 'success',
-                            confirmButtonText: 'Cool'
+                            confirmButtonText: 'Back'
                         })
                     }
                 })
@@ -79,9 +79,9 @@ const AddProduct = () => {
                     if (data.insertedId) {
                         Swal.fire({
                             title: 'Success!',
-                            text: 'Coffee Added Successfully',
+                            text: 'Added Successfully',
                             icon: 'success',
-                            confirmButtonText: 'Cool'
+                            confirmButtonText: 'Back'
                         })
                     }
                 })
@@ -102,9 +102,9 @@ const AddProduct = () => {
                     if (data.insertedId) {
                         Swal.fire({
                             title: 'Success!',
-                            text: 'Coffee Added Successfully',
+                            text: 'Added Successfully',
                             icon: 'success',
-                            confirmButtonText: 'Cool'
+                            confirmButtonText: 'Back'
                         })
                     }
                 })
@@ -125,9 +125,9 @@ const AddProduct = () => {
                     if (data.insertedId) {
                         Swal.fire({
                             title: 'Success!',
-                            text: 'Coffee Added Successfully',
+                            text: 'Added Successfully',
                             icon: 'success',
-                            confirmButtonText: 'Cool'
+                            confirmButtonText: 'Back'
                         })
                     }
                 })
@@ -147,9 +147,9 @@ const AddProduct = () => {
                     if (data.insertedId) {
                         Swal.fire({
                             title: 'Success!',
-                            text: 'Coffee Added Successfully',
+                            text: 'Added Successfully',
                             icon: 'success',
-                            confirmButtonText: 'Cool'
+                            confirmButtonText: 'Back'
                         })
                     }
                 })
