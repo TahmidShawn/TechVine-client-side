@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Apple = ({ apple }) => {
 
-    const { _id,name, type, price, image, brandName, rating, detailsButton, updateButton } = apple
+    const { _id, name, type, price, image, brandName, rating } = apple
 
     return (
         <div className="card bg-base-100 shadow-xl text-center">
@@ -16,8 +16,8 @@ const Apple = ({ apple }) => {
                 <p className="font-bold">Type: {type}</p> <hr />
                 <p className="font-bold">Price: {price}</p> <hr />
                 <p className="font-bold">Rating: {rating}</p> <hr />
-                <Link to={`/home/1/${_id}`}><button className="btn btn-info">{detailsButton}</button></Link>
-                <button className="btn btn-success">{updateButton}</button>
+                <Link to={`/home/1/${_id}`}><button className="btn btn-info">View Details</button></Link>
+                <Link to={`/updateApple/${_id}`}><button className="btn btn-success">Update Products</button></Link>
             </div>
         </div>
     );

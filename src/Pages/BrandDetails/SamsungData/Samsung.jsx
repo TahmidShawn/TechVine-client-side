@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Samsung = ({ samsung }) => {
 
-    const { _id,name, type, price, image, brandName, rating, detailsButton, updateButton } = samsung
+    const { _id,name, type, price, image, brandName, rating } = samsung
 
     return (
         <div>
@@ -17,8 +17,8 @@ const Samsung = ({ samsung }) => {
                     <p className="font-bold">Type: {type}</p> <hr />
                     <p className="font-bold">Price: {price}</p> <hr />
                     <p className="font-bold">Rating: {rating}</p> <hr />
-                    <Link to={`/home/2/${_id}`}><button className="btn btn-info">{detailsButton}</button></Link>
-                    <button className="btn btn-success">{updateButton}</button>
+                    <Link to={`/home/2/${_id}`}><button className="btn btn-info">View Details</button></Link>
+                    <Link to={`/updateSamsung/${_id}`}><button className="btn btn-success">Update Product</button></Link>
                 </div>
             </div>
         </div>

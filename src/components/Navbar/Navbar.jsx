@@ -1,8 +1,18 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from './../../assets/logo.gif'
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import { BiSolidUser } from 'react-icons/bi';
 
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext)
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
 
     const links = <>
         <li>
@@ -35,16 +45,7 @@ const Navbar = () => {
                 My Cart
             </NavLink>
         </li>
-        <li>
-            <NavLink
-                to="/login"
-                className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
-                }
-            >
-                Login
-            </NavLink>
-        </li>
+
 
     </>
 
@@ -63,7 +64,7 @@ const Navbar = () => {
                     <img src={logo} className="w-12 h-12" alt="" />
                     <p className="text-xl font-bold">TechVine</p>
                 </div>
-                
+
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -71,7 +72,47 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+
+                <div className="dropdown dropdown-end">
+                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+
+                            {
+                                user ?
+                                    <img className="w-20 h-20" src={user.photoURL} alt="" />
+                                    :
+
+                                    <BiSolidUser className="text-white text-4xl"></BiSolidUser>
+
+                            }
+                        </div>
+                    </label>
+                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <a className="justify-between">
+                                Profile
+                                <span className="badge">
+                                    {
+                                        user ?
+                                            <p>{user.displayName || 'user'}</p>
+                                            :
+                                            <p>New</p>
+                                    }
+                                </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            {
+                                user ?
+                                    <button onClick={handleLogOut}>LogOut</button>
+                                    :
+                                    <Link to='/login'> <button>LogIn</button></Link>
+                            }
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     );

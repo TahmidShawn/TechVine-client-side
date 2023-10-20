@@ -16,6 +16,14 @@ import IntelId from '../Pages/BrandDetails/IntelData/IntelId';
 import NokiaId from '../Pages/BrandDetails/NokiaData/NokiaId';
 import SamsungId from '../Pages/BrandDetails/SamsungData/SamsungId';
 import SonyId from '../Pages/BrandDetails/SonyData/SonyId';
+import Update from '../Pages/Update/Update';
+import UpdateSamsung from '../Pages/Update/UpdateSamsung';
+import UpdateNokia from '../Pages/Update/UpdateNokia';
+import UpdateSony from '../Pages/Update/UpdateSony';
+import UpdateIntel from '../Pages/Update/UpdateIntel';
+import LavaId from '../Pages/BrandDetails/LavaData/LavaId';
+import UpdateLava from '../Pages/Update/UpdateLava';
+import Register from '../Pages/Register/Register';
 
 
 const Routes = createBrowserRouter([
@@ -61,7 +69,13 @@ const Routes = createBrowserRouter([
             },
             {
                 path: '/home/4',
-                element: <LavaData></LavaData>
+                element: <LavaData></LavaData>,
+                loader: () => fetch('http://localhost:5000/lava')
+            },
+            {
+                path: '/home/4/:_id',
+                element: <LavaId></LavaId>,
+                loader: () => fetch('http://localhost:5000/lava')
             },
             {
                 path: '/home/5',
@@ -96,6 +110,41 @@ const Routes = createBrowserRouter([
                 path: '/login',
                 element: <Login></Login>
             },
+            {
+                path: '/register',
+                element: <Register></Register>
+            },
+            {
+                path: '/updateApple/:id',
+                element: <Update></Update>,
+                loader: ({ params }) => fetch(`http://localhost:5000/apple/${params.id}`)
+
+            },
+            {
+                path: '/updateSamsung/:id',
+                element: <UpdateSamsung></UpdateSamsung>,
+                loader: ({ params }) => fetch(`http://localhost:5000/samsung/${params.id}`)
+            },
+            {
+                path: '/updateNokia/:id',
+                element: <UpdateNokia></UpdateNokia>,
+                loader: ({ params }) => fetch(`http://localhost:5000/nokia/${params.id}`)
+            },
+            {
+                path: '/updateSony/:id',
+                element: <UpdateSony></UpdateSony>,
+                loader: ({ params }) => fetch(`http://localhost:5000/sony/${params.id}`)
+            },
+            {
+                path: '/updateIntel/:id',
+                element: <UpdateIntel></UpdateIntel>,
+                loader: ({ params }) => fetch(`http://localhost:5000/intel/${params.id}`)
+            },
+            {
+                path: '/updateLava/:id',
+                element: <UpdateLava></UpdateLava>,
+                loader: ({ params }) => fetch(`http://localhost:5000/lava/${params.id}`)
+            }
 
         ]
     },

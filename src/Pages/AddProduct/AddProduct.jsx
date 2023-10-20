@@ -1,8 +1,164 @@
+import Swal from "sweetalert2";
 
 const AddProduct = () => {
+    const handleAddProduct = event => {
+        event.preventDefault();
+
+        const form = event.target;
+
+        const name = form.name.value;
+        const image = form.image.value;
+        const brandName = form.brandName.value;
+        const type = form.type.value;
+        const price = form.price.value;
+        const shortDescription = form.shortDescription.value;
+        const rating = form.rating.value;
+
+        const newProduct = { name, image, brandName, type, price, shortDescription, rating }
+
+        console.log(newProduct);
+
+        if (newProduct.brandName === 'apple') {
+            // send data to the server
+            fetch('http://localhost:5000/apple', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(newProduct)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.insertedId) {
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Coffee Added Successfully',
+                            icon: 'success',
+                            confirmButtonText: 'Cool'
+                        })
+                    }
+                })
+        }
+
+        else if (newProduct.brandName === 'samsung') {
+            // send data to the server
+            fetch('http://localhost:5000/samsung', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(newProduct)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.insertedId) {
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Coffee Added Successfully',
+                            icon: 'success',
+                            confirmButtonText: 'Cool'
+                        })
+                    }
+                })
+        }
+
+        else if (newProduct.brandName === 'nokia') {
+            // send data to the server
+            fetch('http://localhost:5000/nokia', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(newProduct)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.insertedId) {
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Coffee Added Successfully',
+                            icon: 'success',
+                            confirmButtonText: 'Cool'
+                        })
+                    }
+                })
+        }
+
+        else if (newProduct.brandName === 'intel') {
+            // send data to the server
+            fetch('http://localhost:5000/intel', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(newProduct)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.insertedId) {
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Coffee Added Successfully',
+                            icon: 'success',
+                            confirmButtonText: 'Cool'
+                        })
+                    }
+                })
+        }
+
+        else if (newProduct.brandName === 'sony') {
+            // send data to the server
+            fetch('http://localhost:5000/sony', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(newProduct)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.insertedId) {
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Coffee Added Successfully',
+                            icon: 'success',
+                            confirmButtonText: 'Cool'
+                        })
+                    }
+                })
+        }
+        else if (newProduct.brandName === 'lava') {
+            // send data to the server
+            fetch('http://localhost:5000/lava', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(newProduct)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.insertedId) {
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Coffee Added Successfully',
+                            icon: 'success',
+                            confirmButtonText: 'Cool'
+                        })
+                    }
+                })
+        }
+
+    }
     return (
         <div className="bg-[#dbdbdb]">
-            <form>
+            <form onSubmit={handleAddProduct}>
 
                 <div className="mb-8">
                     <div className="form-control w-full">
@@ -41,7 +197,7 @@ const AddProduct = () => {
                             <span className="label-text  mx-5">Type :</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="type " placeholder="Type" className="input input-bordered w-full  mx-5" />
+                            <input type="text" name="type" placeholder="Type" className="input input-bordered w-full  mx-5" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 ml-4">

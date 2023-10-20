@@ -1,11 +1,9 @@
-/* eslint-disable react/prop-types */
 
 import Swal from "sweetalert2";
 
-const AppleIdDesign = ({ data }) => {
-
+const LavaIdDesign = ([data]) => {
     const { name, type, price, image, brandName, rating } = data
-    
+
     const handleSubmit = () => {
         const Name = name
         const Type = type
@@ -27,13 +25,14 @@ const AppleIdDesign = ({ data }) => {
             .then(data => {
                 console.log(data);
                 if (data.insertedId) {
+                    // eslint-disable-next-line no-undef
                     Swal.fire({
                         title: 'success',
                         text: 'product added',
                         icon: 'success',
                         confirmButtonText: 'Ok'
                     })
-                    
+
                 }
             })
     }
@@ -56,4 +55,4 @@ const AppleIdDesign = ({ data }) => {
     );
 };
 
-export default AppleIdDesign;
+export default LavaIdDesign;
