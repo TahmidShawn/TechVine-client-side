@@ -36,67 +36,67 @@ const Routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/brand')
+                loader: () => fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/brand')
             },
             {
                 path: '/home/1',
                 element: <AppleData></AppleData>,
-                loader: () => fetch('http://localhost:5000/apple')
+                loader: () => fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/apple')
             },
             {
                 path: 'home/1/:_id',
                 element: <AppleId></AppleId>,
-                loader: () => fetch('http://localhost:5000/apple')
+                loader: () => fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/apple')
             },
             {
                 path: '/home/2',
                 element: <SamsungData></SamsungData>,
-                loader: () => fetch('http://localhost:5000/samsung')
+                loader: () => fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/samsung')
             },
             {
                 path: '/home/2/:_id',
                 element: <SamsungId></SamsungId>,
-                loader: () => fetch('http://localhost:5000/samsung')
+                loader: () => fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/samsung')
             },
             {
                 path: '/home/3',
                 element: <SonyData></SonyData>,
-                loader: () => fetch('http://localhost:5000/sony')
+                loader: () => fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/sony')
             },
             {
                 path: '/home/3/:_id',
                 element: <SonyId></SonyId>,
-                loader: () => fetch('http://localhost:5000/sony')
+                loader: () => fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/sony')
             },
             {
                 path: '/home/4',
                 element: <LavaData></LavaData>,
-                loader: () => fetch('http://localhost:5000/lava')
+                loader: () => fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/lava')
             },
             {
                 path: '/home/4/:_id',
                 element: <LavaId></LavaId>,
-                loader: () => fetch('http://localhost:5000/lava')
+                loader: () => fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/lava')
             },
             {
                 path: '/home/5',
                 element: <IntelData></IntelData>,
-                loader: () => fetch('http://localhost:5000/intel')
+                loader: () => fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/intel')
             },
             {
                 path: '/home/5/:_id',
                 element: <IntelId></IntelId>,
-                loader: () => fetch('http://localhost:5000/intel')
+                loader: () => fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/intel')
             },
             {
                 path: '/home/6',
                 element: <NokiaData></NokiaData>,
-                loader: () => fetch('http://localhost:5000/nokia')
+                loader: () => fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/nokia')
             },
             {
                 path: '/home/6/:_id',
                 element: <NokiaId></NokiaId>,
-                loader: () => fetch('http://localhost:5000/nokia')
+                loader: () => fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/nokia')
             },
             {
                 path: '/addProduct',
@@ -105,7 +105,7 @@ const Routes = createBrowserRouter([
             {
                 path: '/myCart',
                 element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
-                loader: () => fetch('http://localhost:5000/products')
+                loader: () => fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/products')
             },
             {
                 path: '/login',
@@ -118,33 +118,33 @@ const Routes = createBrowserRouter([
             {
                 path: '/updateApple/:id',
                 element: <Update></Update>,
-                loader: ({ params }) => fetch(`http://localhost:5000/apple/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/apple/${params.id}`)
 
             },
             {
                 path: '/updateSamsung/:id',
                 element: <UpdateSamsung></UpdateSamsung>,
-                loader: ({ params }) => fetch(`http://localhost:5000/samsung/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/samsung/${params.id}`)
             },
             {
                 path: '/updateNokia/:id',
                 element: <UpdateNokia></UpdateNokia>,
-                loader: ({ params }) => fetch(`http://localhost:5000/nokia/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/nokia/${params.id}`)
             },
             {
                 path: '/updateSony/:id',
                 element: <UpdateSony></UpdateSony>,
-                loader: ({ params }) => fetch(`http://localhost:5000/sony/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/sony/${params.id}`)
             },
             {
                 path: '/updateIntel/:id',
                 element: <UpdateIntel></UpdateIntel>,
-                loader: ({ params }) => fetch(`http://localhost:5000/intel/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/intel/${params.id}`)
             },
             {
                 path: '/updateLava/:id',
                 element: <UpdateLava></UpdateLava>,
-                loader: ({ params }) => fetch(`http://localhost:5000/lava/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/lava/${params.id}`)
             }
 
         ]

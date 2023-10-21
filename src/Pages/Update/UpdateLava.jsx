@@ -26,7 +26,7 @@ const UpdateLava = () => {
         console.log(updatedBrand);
 
         // send data to the server
-        fetch(`http://localhost:5000/lava/${_id}`, {
+        fetch(`https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/lava/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

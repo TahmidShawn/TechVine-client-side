@@ -14,7 +14,7 @@ const LavaIdDesign = ([data]) => {
         const product = { Name, Type, Price, Image, BrandName, Rating }
         console.log(product);
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

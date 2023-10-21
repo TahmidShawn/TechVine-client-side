@@ -20,7 +20,7 @@ const AddProduct = () => {
 
         if (newProduct.brandName === 'apple') {
             // send data to the server
-            fetch('http://localhost:5000/apple', {
+            fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/apple', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -43,7 +43,7 @@ const AddProduct = () => {
 
         else if (newProduct.brandName === 'samsung') {
             // send data to the server
-            fetch('http://localhost:5000/samsung', {
+            fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/samsung', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -66,7 +66,7 @@ const AddProduct = () => {
 
         else if (newProduct.brandName === 'nokia') {
             // send data to the server
-            fetch('http://localhost:5000/nokia', {
+            fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/nokia', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -89,7 +89,7 @@ const AddProduct = () => {
 
         else if (newProduct.brandName === 'intel') {
             // send data to the server
-            fetch('http://localhost:5000/intel', {
+            fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/intel', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -112,7 +112,7 @@ const AddProduct = () => {
 
         else if (newProduct.brandName === 'sony') {
             // send data to the server
-            fetch('http://localhost:5000/sony', {
+            fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/sony', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -134,7 +134,7 @@ const AddProduct = () => {
         }
         else if (newProduct.brandName === 'lava') {
             // send data to the server
-            fetch('http://localhost:5000/lava', {
+            fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/lava', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
