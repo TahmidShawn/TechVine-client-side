@@ -16,7 +16,7 @@ const SamsungIdDesign = ({ data }) => {
         const product = { Name, Type, Price, Image, BrandName, Rating }
         console.log(product);
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://assignment-10-server-janbgae6o-tahmids-projects.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -42,7 +42,7 @@ const SamsungIdDesign = ({ data }) => {
     return (
 
         <div className="card card-side bg-base-100 shadow-xl">
-            <figure className="w-1/2"><img src={image} alt="Movie" className="w-80" /></figure>
+            <figure className="w-1/2"><img src={image} alt="Movie" className="w-40 md:w-80" /></figure>
             <div className="card-body">
 
                 <h2 className="font-bold text-3xl">{name}</h2>
